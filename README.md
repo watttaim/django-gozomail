@@ -3,6 +3,8 @@
 Django Gozomail makes emailing easier. Allows for bulk sends as well as single email sending.
 Alternatively hooks into some form of analytics.
 
+You will need to install the packages boto and django-ses.
+Refer to https://github.com/hmarr/django-ses how to configure settings.py
 
 Example to send an email using django-gozomail
 
@@ -11,7 +13,7 @@ Example to send an email using django-gozomail
     def send_email(request):
         if request.method == 'POST':
             try:
-                envelope = Envelope('taimin@gozolabs.com', recipient_list=['watttaim@gmail.com'], subject='Hello dude')
+                envelope = Envelope('taimin@gozolabs.com', recipient_list=['watttaim@gmail.com', 'quek@gozolabs.com'], subject='Hello dude')
                 mailer = Mailer()
                 username = 'Watt'
                 plaintext = get_template('email.txt')
