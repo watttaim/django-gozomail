@@ -1,7 +1,7 @@
 ## django-gozomail
 
 Django Gozomail makes emailing easier. Allows for bulk sends as well as single email sending.
-Alternatively hooks into some form of analytics.
+Alternatively hooks into some form of analytics to display status.
 
 You will need to install the packages boto and django-ses.
 Refer to https://github.com/hmarr/django-ses how to configure settings.py
